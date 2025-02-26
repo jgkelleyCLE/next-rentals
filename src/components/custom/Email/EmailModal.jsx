@@ -14,11 +14,13 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import { useCreateOrderMutation } from '@/redux/ordersApi'
 import { useSelector } from 'react-redux'
+import { useRouter } from 'next/navigation'
 
 const EmailModal = ({ subtotal, deliveryFee, taxPrice, total }) => {
 
     const [open, setOpen] = useState(false)
     const cart = useSelector(state => state.cart.cartList)
+    const router = useRouter()
 
     const [title, setTitle] = useState('')
     const [email, setEmail] = useState('')
@@ -78,6 +80,7 @@ const EmailModal = ({ subtotal, deliveryFee, taxPrice, total }) => {
         if(orderSuccess){
           toast.success("Order successfully created.")
           setOpen(false)
+          router.push('/thank-you')
         }
 
         if(orderError){

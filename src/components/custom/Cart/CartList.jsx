@@ -59,7 +59,7 @@ const sortedCart = [...cart].sort((a, b) => b.price - a.price);
             <CartCard key={item._id} className="relative " >
               
               <div className="flex items-start">
-                  <Image width={50} height={50} className="w-32 object-fit rounded-md cursor-pointer mr-2" src={item.image} alt={item.product} onClick={()=> router.push(`/product/${item._id}`)} />
+                  <Image width={100} height={50} className="w-32 object-fit rounded-md cursor-pointer mr-2" src={item.image} alt={item.product} onClick={()=> router.push(`/product/${item._id}`)} />
 
                   <div className="flex flex-col items-start">
                     <h1 className="text-xl font-bold cursor-pointer" onClick={()=> router.push(`/product/${item._id}`)}>{item.product}</h1>

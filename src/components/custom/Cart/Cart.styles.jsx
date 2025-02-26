@@ -2,6 +2,7 @@ import tw from 'tailwind-styled-components'
 
 import { FiPlusCircle } from "react-icons/fi";
 import { FiMinusCircle } from "react-icons/fi";
+import Link from 'next/link';
 
 export const OrangeButton = tw.button`
 bg-safariOrange 
@@ -27,6 +28,19 @@ transition
 duration-300
 mt-1
 font-bold
+`
+
+export const OrangeLink = tw(Link)`
+       bg-safariOrange 
+hover:bg-safariOrangeHover 
+p-2
+px-6
+rounded-md 
+text-white 
+transition 
+duration-300
+font-bold
+mt-8
 `
 
 export const CartCard = tw.div`
