@@ -1,3 +1,4 @@
+import { getProducts } from '@/actions/getAllProducts'
 import CategoryCard from '@/components/custom/Products/CategoryCard'
 import { CategoryGridContainer, GridContainer, PageContainer } from '@/components/custom/UI'
 import React from 'react'
@@ -13,6 +14,9 @@ export const metadata = {
 }
 
 const ProductsPage = () => {
+
+
+
   return (
     <PageContainer>
       <CategoryGridContainer>
