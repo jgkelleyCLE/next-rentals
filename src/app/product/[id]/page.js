@@ -11,7 +11,7 @@ export const generateMetadata = async({ params }) => {
 
 
     return {
-        title: `Tentlify Rentals | ${product.product}`,
+        title: `${product?.product} | Tentlify Rentals`,
         description: `Details about ${product?.product}`,
         keywords: `${product?.product} rentals, ${product?.product} for rent, ${product?.product} rental, ${product?.product} tent rental, rent ${product?.product} cleveland, ${product?.product} rental cleveland, ${product?.product} tent rental cleveland`,
         openGraph: {
