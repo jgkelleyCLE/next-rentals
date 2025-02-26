@@ -4,8 +4,7 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/custom/Navbar/Navbar";
 import { Toaster } from "sonner";
 import { Provider as ChakraProvider } from "@/components/ui/provider"
-import { Provider } from "react-redux";
-import { store } from "@/redux/store";
+
 import ReduxProvider from "@/components/ReduxProvider";
 import { LocalStorageProvider } from "@/components/LocalStorageProvider";
 
