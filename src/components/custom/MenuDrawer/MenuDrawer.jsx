@@ -41,8 +41,8 @@ const MenuDrawer = () => {
 
     const list = mobileMenuLinks.map((item, index) => (
         <div key={index} className="relative w-full" onClick={()=> navigationHandler(item)}>
-            <div className="bg-black/30 inset-0 absolute z-20 top-0 left-0 w-full"></div>
-            <Image width={300} height={200} alt={item.title} src={item.image} className="w-full h-[100px] object-cover z-10 rounded-md" />
+            <div className="bg-black/40 inset-0 absolute z-20 top-0 left-0 w-full"></div>
+            <Image width={200} height={150} alt={item.title} src={item.image} priority className="w-full h-[100px] object-cover z-10 rounded-md" />
             <h1 className="text-white text-2xl font-bold absolute left-2 bottom-0 z-30">{item.title}</h1>
         </div>
       ))

@@ -34,7 +34,7 @@ const FetchProduct = ({ id }) => {
     if(isLoading){
         content = <FlexColumn><PageSpinner /></FlexColumn>
     }else if(isSuccess){
-        content = <FlexRow className="mt-2 flex-col lg:flex-row  ">
+        content = <FlexRow className="mt-2 flex-col lg:flex-row items-start  ">
         {/* LEFT SIDE */}
         <div className="lg:w-1/2 w-full  ">
           <Image width={1000} height={600} className="w-full rounded-md max-h-[700px] object-contain" src={product?.image} alt={product?.product} />

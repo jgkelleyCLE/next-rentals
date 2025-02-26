@@ -8,6 +8,8 @@ import { CartCard, MinusIcon, OrangeButton, PlusIcon, QuantityContainer } from '
 import { FlexColumn, FlexRow } from '../UI'
 import { decreaseQuantity, increaseQuantity, removeFromCart } from '@/redux/cartSlice'
 import EmailModal from '../Email/EmailModal'
+import ClearCartModal from '../Modals/ClearCartModal'
+import Image from 'next/image'
 
 const CartList = () => {
 
@@ -57,7 +59,7 @@ const sortedCart = [...cart].sort((a, b) => b.price - a.price);
             <CartCard key={item._id} className="relative " >
               
               <div className="flex items-start">
-                  <img className="w-32 object-fit rounded-md cursor-pointer mr-2" src={item.image} alt={item.product} onClick={()=> router.push(`/product/${item._id}`)} />
+                  <Image width={50} height={50} className="w-32 object-fit rounded-md cursor-pointer mr-2" src={item.image} alt={item.product} onClick={()=> router.push(`/product/${item._id}`)} />
 
                   <div className="flex flex-col items-start">
                     <h1 className="text-xl font-bold cursor-pointer" onClick={()=> router.push(`/product/${item._id}`)}>{item.product}</h1>
@@ -86,9 +88,12 @@ const sortedCart = [...cart].sort((a, b) => b.price - a.price);
           ))
         }
         <div className="w-full flex items-center justify-end mr-8">
-          <OrangeButton onClick={()=> setOpen(true)} className="bg-safariOrange hover:bg-safariOrangeHover p-2 rounded-md text-white transition duration-300 mt-0">Clear Cart</OrangeButton>
+          
+
+        <ClearCartModal />
+
         </div>
-        {/* {open ? <CartAlert open={open} setOpen={setOpen} /> : null} */}
+        
           </div>
 
 

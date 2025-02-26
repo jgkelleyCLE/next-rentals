@@ -16,6 +16,19 @@ mt-4
 font-bold
 `
 
+export const OrangeTrigger = tw.div`
+    bg-safariOrange 
+hover:bg-safariOrangeHover 
+p-2
+px-6
+rounded-md 
+text-white 
+transition 
+duration-300
+mt-1
+font-bold
+`
+
 export const CartCard = tw.div`
     flex 
     items-center 

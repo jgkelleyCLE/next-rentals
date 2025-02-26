@@ -46,14 +46,14 @@ const ProductCard = ({ item }) => {
                         <h1 className="font-semibold text-md md:text-lg lg:text-xl line-clamp-1">{item.product}</h1> 
                         
                         </FlexRow>
-                        <FlexRow className=" w-full">
+                        <h1 className="font-semibold text-gray-400 -mt-1">${item.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h1>
+                        {/* <FlexRow className=" w-full mb-1">
                           <Input w="20" bg="white" type='number'  placeholder="Qty" value={quantity} onChange={(e)=> setQuantity(Number(e.target.value))} className="p-2 text-black font-bold" />
-                          <button onClick={()=> cartHandler(item)} className="bg-green-400 hover:bg-green-500 transition duration-300 p-2 rounded-md flex items-center">
+                          <button onClick={()=> cartHandler(item)} className="bg-green-400 hover:bg-green-500 transition duration-300 p-2 rounded-md flex items-center justify-center w-full">
                             <FaCartPlus className="text-lg text-white mr-2" />
                             <p className="text-white font-semibold flex items-center">Add <span className="hidden md:flex">&nbsp;to Cart</span></p>
                             </button>
-                        </FlexRow>
-                        <h1 className="font-semibold text-gray-400">${item.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h1>
+                        </FlexRow> */}
                         <ViewProductButton onClick={()=> router.push(`/product/${item._id}`)}>View Product</ViewProductButton>
                     </ProductCardDetails>
                     
