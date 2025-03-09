@@ -3,14 +3,11 @@ import React, { useState } from 'react'
 import { toast } from 'sonner'
 import { FaSearch } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
-import { useCreateSearchMutation } from '@/redux/searchApi'
 
 const Searchbar = () => {
 
     const router = useRouter()
     const [query, setQuery] = useState("")
-
-    const [createSearch] = useCreateSearchMutation()
 
 
     const handleSearchSubmit = (e) => {
@@ -22,7 +19,6 @@ const Searchbar = () => {
             toast.error("Please enter a search query.")
             return
         }else {
-          createSearch({term: query})
           router.push(`/search?q=${query}`)
           setQuery('')
         }

@@ -20,9 +20,16 @@ export const searchApi = createApi({
                 body: {term, resultsCount, resultIds},
             }),
             invalidatesTags: ["Search"],
-        })
+        }),
+        getSearchById: builder.query({
+            query: (id) => ({
+                url: `/api/search/${id}`,
+                method: "GET",
+            }),
+            providesTags: ["Search"],
+        }),
     })
 
 })
 
-export const { useGetAllSearchesQuery, useCreateSearchMutation } = searchApi
+export const { useGetAllSearchesQuery, useCreateSearchMutation, useGetSearchByIdQuery } = searchApi

@@ -15,11 +15,9 @@ const OrderDetailsPage = () => {
 
     // const order = await getOrder(id)
     const { data: order } = useGetOrderByIdQuery(id)
-    console.log(order)
 
     let content;
 
-    
 
   return (
     <div>

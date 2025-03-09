@@ -10,20 +10,16 @@ const StatusSelect = ({ item }) => {
     const [updateOrder, { data: orderData, isLoading, isSuccess, isError, error }] = useUpdateOrderStatusMutation()
 
     const statuses = [
-        'Pending',
-        'Processing',
-        'Shipped',
+        'Quote',
+        'Reservation',
         'Delivered',
+        'Closed',
         'Cancelled'
     ]
 
     const statusHandler = (orderId, newStatus) => {
 
-        console.log("ORDER ID: ", orderId)
-        console.log("NEW STATUS: ", newStatus)
-
         updateOrder({ id: orderId, status: newStatus })
-
 
     }
 

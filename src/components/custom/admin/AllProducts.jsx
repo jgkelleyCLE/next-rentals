@@ -20,7 +20,7 @@ const AllProducts = () => {
     let content;
     if(isSuccess){
         content = filteredProducts?.map((item, index) => (
-            <Table.Row key={item._id} className={`${item.status === "Inactive" ? "bg-red-100" : null} border-2 border-gray-300 relative`}>
+            <Table.Row key={item._id} className={`${item.status === "Inactive" ? "bg-red-100 dark:bg-red-950" : null} border-2 border-gray-300 relative`}>
                 {/* <h1 className="absolute -left-6">{index + 1}</h1> */}
               <Table.Cell className="hidden md:block"><Link href={`/product/${item._id}`}><Image width={75} height={50} src={item.image} alt={item.product} /></Link></Table.Cell>
               <Table.Cell><Link href={`/product/${item._id}`}>{item.product}</Link></Table.Cell>
