@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const productApi = createApi({
     reducerPath: 'productApi',
     baseQuery: fetchBaseQuery({ baseUrl: 'https://tentlify-ecom.up.railway.app' }),
-    // baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
+    // baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }), //TESTING
     tagTypes: ['Product'],
     endpoints: (builder) => ({
         getAllProducts: builder.query({
@@ -27,6 +27,13 @@ export const productApi = createApi({
             }),
             providesTags: ['Product']
         }),
+        getActiveProductsByCategory: builder.query({
+            query: (category) => ({
+                url: `/api/products/active/${category}`,
+                method: 'GET'
+            }),
+            providesTags: ['Product']
+        }),
         searchProducts: builder.query({
             query: (searchTerm) => ({
                 url: `/api/products/search?q=${searchTerm}`,
@@ -37,7 +44,15 @@ export const productApi = createApi({
                 console.error(`Error searching products with term ${searchTerm}:`, error);
             }
         }),
+        updateProductStatus: builder.mutation({
+            query: ({ id, status }) => ({
+                url: `/api/products/${id}/status`,
+                method: 'PUT',
+                body: { status }
+            }),
+            invalidatesTags: ['Product']
+        })
     })
 })
 
-export const { useGetAllProductsQuery, useGetProductQuery, useGetProductsByCategoryQuery, useSearchProductsQuery  } = productApi;
+export const { useGetAllProductsQuery, useGetProductQuery, useGetProductsByCategoryQuery, useSearchProductsQuery, useUpdateProductStatusMutation, useGetActiveProductsByCategoryQuery  } = productApi;

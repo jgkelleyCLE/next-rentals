@@ -1,5 +1,5 @@
 "use client"
-import { useGetProductsByCategoryQuery } from '@/redux/productApi'
+import { useGetActiveProductsByCategoryQuery, useGetProductsByCategoryQuery } from '@/redux/productApi'
 import React from 'react'
 import { FlexColumn, GridContainer, PageContainer } from '../UI'
 import ProductCard from './ProductCard'
@@ -7,8 +7,9 @@ import PageSpinner from '@/components/Loading/PageSpinner'
 
 const FetchProducts = ({ slug }) => {
 
-    const { data: products, isLoading, isSuccess, isError, error } = useGetProductsByCategoryQuery(slug)
+    // const { data: products, isLoading, isSuccess, isError, error } = useGetProductsByCategoryQuery(slug)
     
+    const { data: products, isLoading, isSuccess, isError, error } = useGetActiveProductsByCategoryQuery(slug)
 
     let content;
 

@@ -70,7 +70,8 @@ const EmailModal = ({ subtotal, deliveryFee, taxPrice, total }) => {
                   itemsPrice: subtotal,
                   taxPrice,
                   shippingPrice: deliveryFee,  
-                  totalPrice: total
+                  totalPrice: total,
+                  orderStatus: 'Pending'
                 })
             }
         }

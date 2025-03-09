@@ -3,8 +3,9 @@ import ProductCard from '@/components/custom/Products/ProductCard'
 import { CategoryGrid, FlexColumn, PageContainer } from '@/components/custom/UI'
 import PageSpinner from '@/components/Loading/PageSpinner'
 import { useSearchProductsQuery } from '@/redux/productApi'
+import { useCreateSearchMutation } from '@/redux/searchApi'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const SearchResultsPage = () => {
     
@@ -15,7 +16,16 @@ const SearchResultsPage = () => {
 
     const { data: searchData, isLoading, isError, isSuccess, error } = useSearchProductsQuery(query)
 
-   
+    
+   const [createSearch] = useCreateSearchMutation()
+
+   useEffect(()=> {
+      //count and Ids will be undefined unless there's searchData first
+    if(query && searchData){
+      createSearch({term: query, resultsCount: searchData?.length, resultIds: searchData?.map(item => item._id)})
+    }
+
+   }, [query, searchData])
 
     let content;
     let errorMessage
