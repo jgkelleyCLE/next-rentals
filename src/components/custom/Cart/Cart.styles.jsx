@@ -1,7 +1,7 @@
-import tw from 'tailwind-styled-components'
+import tw from 'tailwind-styled-components';
 
-import { FiPlusCircle } from "react-icons/fi";
-import { FiMinusCircle } from "react-icons/fi";
+import { FiPlusCircle } from 'react-icons/fi';
+import { FiMinusCircle } from 'react-icons/fi';
 import Link from 'next/link';
 
 export const OrangeButton = tw.button`
@@ -15,7 +15,7 @@ transition
 duration-300
 mt-4
 font-bold
-`
+`;
 
 export const OrangeTrigger = tw.div`
     bg-safariOrange 
@@ -28,7 +28,7 @@ transition
 duration-300
 mt-1
 font-bold
-`
+`;
 
 export const OrangeLink = tw(Link)`
        bg-safariOrange 
@@ -41,7 +41,7 @@ transition
 duration-300
 font-bold
 mt-8
-`
+`;
 
 export const CartCard = tw.div`
     flex 
@@ -55,20 +55,20 @@ export const CartCard = tw.div`
     w-full 
     rounded-md 
     my-2
-`
+`;
 
 export const QuantityContainer = tw.div`
     flex 
     items-center 
     gap-2
-`
+`;
 
 export const MinusIcon = tw(FiMinusCircle)`
     cursor-pointer
     text-xl
-`
+`;
 
 export const PlusIcon = tw(FiPlusCircle)`
     cursor-pointer
     text-xl
-`
+`;

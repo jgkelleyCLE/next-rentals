@@ -1,23 +1,21 @@
-import { getProducts } from "@/actions/getAllProducts"
+import { getProducts } from '@/actions/getAllProducts';
 
+const sitemap = async () => {
+  const products = await getProducts();
 
-const sitemap = async() => {
+  const product = products?.map((product) => {
+    return {
+      url: `https://tentlifyrentals.com/product/${product._id}`,
+    };
+  });
 
-    const products = await getProducts()
-
-    const product = products?.map(product => {
-        return {
-            url: `https://tentlifyrentals.com/product/${product._id}`,
-        }
-    })
-
-    return [{
-        url: 'https://tentlifyrentals.com/',
-        lastModified: new Date()
+  return [
+    {
+      url: 'https://tentlifyrentals.com/',
+      lastModified: new Date(),
     },
-    ...product
-]
+    ...product,
+  ];
+};
 
-}
-
-export default sitemap
+export default sitemap;

@@ -1,13 +1,10 @@
-import React from 'react'
-import SearchTerms from './SearchTerms'
-import { FlexRow } from '../UI'
-import PopularSearches from '../Search/PopularSearches'
-import SearchChart from '../Search/SearchChart'
+import React from 'react';
+import SearchTerms from './SearchTerms';
+import { FlexRow } from '../UI';
+import PopularSearches from '../Search/PopularSearches';
+import SearchChart from '../Search/SearchChart';
 
 const AdminSearch = () => {
-
-
-
   return (
     <div className="mb-10">
       <SearchChart />
@@ -16,7 +13,7 @@ const AdminSearch = () => {
         <PopularSearches />
       </FlexRow>
     </div>
-  )
-}
+  );
+};
 
-export default AdminSearch
+export default AdminSearch;

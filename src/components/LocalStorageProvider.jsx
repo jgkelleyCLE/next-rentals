@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 export function LocalStorageProvider({ children }) {
-    const { isLoading } = useLocalStorage()
+  const { isLoading } = useLocalStorage();
 
-    if (isLoading) {
-        return null // or a loading spinner
-    }
+  if (isLoading) {
+    return null; // or a loading spinner
+  }
 
-    return children
+  return children;
 }

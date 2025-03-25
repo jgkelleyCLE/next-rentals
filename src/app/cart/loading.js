@@ -1,16 +1,15 @@
-import { FlexColumn, PageContainer } from '@/components/custom/UI'
-import PageSpinner from '@/components/Loading/PageSpinner'
-import React from 'react'
+import { FlexColumn, PageContainer } from '@/components/custom/UI';
+import PageSpinner from '@/components/Loading/PageSpinner';
+import React from 'react';
 
 const LoadingCart = () => {
   return (
     <PageContainer>
-    <FlexColumn>
+      <FlexColumn>
         <PageSpinner />
-        
-    </FlexColumn>
+      </FlexColumn>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default LoadingCart
+export default LoadingCart;

@@ -1,10 +1,10 @@
-import tw from 'tailwind-styled-components'
+import tw from 'tailwind-styled-components';
 
 export const FlexRow = tw.div`
     flex 
     items-center 
     gap-2
-`
+`;
 
 export const NavContainer = tw.div`
     bg-black/80
@@ -14,7 +14,7 @@ export const NavContainer = tw.div`
     items-center
     justify-between
     
-`
+`;
 
 export const FlexColumn = tw.div`
     flex
@@ -22,7 +22,7 @@ export const FlexColumn = tw.div`
     items-center
     gap-2
     w-full
-`
+`;
 
 export const GridContainer = tw.div`
     grid
@@ -34,21 +34,21 @@ export const GridContainer = tw.div`
     2xl:grid-cols-5
     gap-2
     p-4
-`
+`;
 
 export const CategoryGridContainer = tw.div`
     grid
     grid-cols-2
     gap-4
     p-4
-`
+`;
 
 export const PageContainer = tw.div`
     pt-24
     max-w-[1800px]
     mx-auto
     
-`
+`;
 
 export const ProductDetailsContainer = tw.div`
     flex
@@ -62,7 +62,7 @@ export const ProductDetailsContainer = tw.div`
     bg-gray-200
     dark:bg-gray-800
     max-h-[600px]
-`
+`;
 
 export const AddToCartButton = tw.button`
     bg-black 
@@ -77,7 +77,7 @@ export const AddToCartButton = tw.button`
     hover:bg-black/90 
     transition 
     duration-300
-`
+`;
 
 export const StyledInput = tw.input`
     border-2 
@@ -86,7 +86,7 @@ export const StyledInput = tw.input`
     rounded-md 
     w-full 
     my-1
-`
+`;
 
 export const ItemCard = tw.div`
     flex
@@ -97,7 +97,7 @@ export const ItemCard = tw.div`
     rounded-md
     dark:bg-gray-800
     bg-gray-200
-`
+`;
 
 export const ProductCardDetails = tw.div`
     flex
@@ -106,14 +106,14 @@ export const ProductCardDetails = tw.div`
     p-3
     gap-1
     w-full
-`
+`;
 
 export const ProductImage = tw.img`
     rounded-t-md
     w-full
     h-[300px]
     object-cover
-`
+`;
 
 export const ViewProductButton = tw.button`
     bg-primary
@@ -125,14 +125,14 @@ export const ViewProductButton = tw.button`
     duration-300
     w-full
     font-bold
-`
+`;
 
 export const MapContainer = tw.div`
     relative 
     h-full 
     supports-[height:100cqh]:h-[100cqh]
     supports-[height:100svh]:h-[100svh]
-`
+`;
 
 export const CategoryGrid = tw.div`
     grid
@@ -145,4 +145,4 @@ export const CategoryGrid = tw.div`
     gap-4
     p-4
     m-4
-`
+`;
